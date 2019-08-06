@@ -1,0 +1,20 @@
+<ul class="parent">
+  <li *ngFor="let t of allBoards" >
+    <h2>{{ t.title }}</h2>
+    <hr/>
+    <ul>
+    <li *ngFor="let ch of t.child" class="box"  >
+    <h3>{{ch.title }}</h3>
+    
+    </li>
+    </ul>
+    <hr/>
+    <section class="edit">
+    <input type="text" #txtNewListName>
+    <input type="hidden" #txtParent value="{{t.id}}">
+    <input class="add" type="button" value="+" (click)="addList(txtNewListName.value,txtParent.value)">
+  </section>
+  
+</li>
+</ul>
+<div class="box" cdkDrag>Drag me around!</div>

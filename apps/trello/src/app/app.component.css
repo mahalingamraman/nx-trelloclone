@@ -1,0 +1,89 @@
+
+section {
+  padding: 10px 40px;
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul ul {
+  padding: 10px;
+}
+.parent {
+  display: flow-root;
+}
+.tracks {
+  width: 27%;
+  float: left;
+  margin: 20px;
+  background-color: #dddddd;
+  border-radius: 1rem;
+  color: #000000;
+  display: flow-root;
+  min-height: 300px;
+}
+
+.card-list-content {
+  display: block;
+  vertical-align: top;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  -webkit-animation: eMLfYp 300ms linear;
+  animation: eMLfYp 300ms linear;
+}
+
+h2 {
+  color: #333;
+  -webkit-letter-spacing: 1.66;
+  -moz-letter-spacing: 1.66;
+  -ms-letter-spacing: 1.66;
+  letter-spacing: 1.66;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h3 {
+  margin: 5px 20px;
+  padding: 14px 7px;
+  background: rgb(241, 241, 241);
+  border-radius: 4.5px;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  -webkit-animation: eMLfYp 300ms linear;
+  animation: eMLfYp 300ms linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+}
+.cdk-drag {
+  padding-top: 1px;
+}
+input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  /* border: 2.5px solid rgba(255, 255, 255, 0.8); */
+  width: 100%;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16),
+    0 3px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16),
+    0 3px 3px rgba(0, 0, 0, 0.23);
+  width: 200px;
+
+}
+
+
+.add {
+  width: 60px;
+  margin: 0 10px;
+}
+

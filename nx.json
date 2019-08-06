@@ -1,0 +1,27 @@
+{
+  "npmScope": "trelloclone",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "trello-e2e": {
+      "tags": []
+    },
+    "trello": {
+      "tags": []
+    },
+    "data": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    }
+  }
+}

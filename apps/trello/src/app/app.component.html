@@ -1,0 +1,47 @@
+<h1>Trello Clone</h1>
+
+<section class="edit">
+  <input type="text" #txtNewBoardName >
+  <input class="add" type="button" value="Add" (click)="addBoard(txtNewBoardName.value)">
+</section>
+<div class="parent" cdkDropList [cdkDropListData]="tracks" (cdkDropListDropped)="onTrackDrop($event)" cdkDropListOrientation="horizontal">
+  <div class="tracks" *ngFor="let track of tracks">
+    <h2 cdkDragHandle>{{track.title}}</h2>
+    <div class="card-list-content" cdkDropList [id]="track.id" [cdkDropListData]="track.tasks"
+      [cdkDropListConnectedTo]="trackIds" (cdkDropListDropped)="onTaskDrop($event)">
+        <div *ngFor="let task of track.tasks" cdkDrag>
+          <h3>
+              {{task.title}}
+          </h3>
+        </div>
+        <hr/>
+    <section class="edit">
+      <input type="text" #txtNewListName>
+      <input type="hidden" #txtParent value="{{track.id}}">
+      <input class="add" type="button" value="+" (click)="addList(txtNewListName.value,txtParent.value)">
+    </section>
+    </div>
+  </div>
+</div>
+<!-- 
+
+<ul class="parent" cdkDropList [cdkDropListData]="tracks" (cdkDropListDropped)="onTrackDrop($event)" cdkDropListOrientation="horizontal">
+  <li *ngFor="let track of tracks" >
+    <h2 cdkDragHandle>{{ track.title }}</h2>
+    <hr/>
+     <div class="card-list-content" cdkDropList [id]="track.id" [cdkDropListData]="track.tasks"
+        [cdkDropListConnectedTo]="taskIds" (cdkDropListDropped)="onTaskDrop($event)">
+        
+      <div *ngFor="let task of track.tasks"  cdkDrag>
+        <h3 >{{task.title}}</h3>
+      </div>
+    </div>
+    <hr/>
+    <section class="edit">
+    <input type="text" #txtNewListName>
+    <input type="hidden" #txtParent value="{{track.id}}">
+    <input class="add" type="button" value="+" (click)="addList(txtNewListName.value,txtParent.value)">
+  </section>
+  
+</li>
+</ul>-->
